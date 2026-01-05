@@ -1,0 +1,19 @@
+{
+  "request_processors": [
+    {
+      "ml_inference": {
+        "function_name": "text_embedding",
+        "model_id": "{{model_id}}",
+        "model_input": "{ \"text_docs\": [\"${input_map.query}\"], \"target_response\": [\"sentence_embedding\"] }",
+        "input_map": [
+          { "query": "ext.ml_inference.text" }
+        ],
+        "output_map": [
+          { "query_embedding": "$.inference_results[0].output[0].data" }
+        ],
+        "ignore_missing": false,
+        "ignore_failure": false
+      }
+    }
+  ]
+}

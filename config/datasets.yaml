@@ -1,0 +1,12 @@
+- name: jaqket
+  type: JMTEB
+  config:
+    document:
+      name: jaqket-corpus
+      split: corpus
+    query:
+      name: jaqket-query
+      split: test
+  columns:
+    id: docid
+    text: text

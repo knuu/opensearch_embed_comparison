@@ -1,0 +1,9 @@
+index_template:
+  name: default
+  path: infra/opensearch/templates/index.mustache
+ingest_pipeline:
+  name: document-embedding
+  path: infra/opensearch/pipelines/ingest.mustache
+search_pipeline:
+  name: query-embedding
+  path: infra/opensearch/pipelines/search.mustache

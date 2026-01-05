@@ -1,0 +1,26 @@
+{
+  "index_patterns": ["index-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0,
+      "index.knn": false,
+      "index.default_pipeline": "{{ingest_pipeline_name}}",
+      "index.search.default_pipeline": "{{search_pipeline_name}}"
+    },
+    "mappings": {
+      "properties": {
+        "id": {
+          "type": "keyword"
+        },
+        "text": {
+          "type": "text"
+        },
+        "embedding": {
+          "type": "knn_vector",
+          "dimension": {{embedding_dim}}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+- name: huggingface/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  embedding_dim: 384
+  version: "1.0.2"
+  model_format: "TORCH_SCRIPT"
